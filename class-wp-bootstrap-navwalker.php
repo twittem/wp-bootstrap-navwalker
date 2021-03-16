@@ -444,6 +444,10 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 					// Glyphicons.
 					$icon_classes[] = $class;
 					unset( $classes[ $key ] );
+				} elseif ( preg_match( '/^oi-(\S*)?|^oi(\s?)$/i', $class ) ) {
+					// Open Iconic.
+					$icon_classes[] = $class;
+					unset( $classes[ $key ] );
 				}
 			}
 
